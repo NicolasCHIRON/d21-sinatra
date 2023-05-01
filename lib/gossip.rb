@@ -24,14 +24,14 @@ class Gossip
     return Gossip.all[id_gossip.to_i - 1]
   end
 
-  def self.update(id_gossip, author, content)
-    gossips_update = Gossip.all
-    gossips_update[id_gossip.to_i - 1] = Gossip.new(author, content)
+  def self.update(id, author, content)
+    all_gossips = Gossip.all
+    all_gossips[id.to_i - 1] = Gossip.new(author, content)
     CSV.open("./db/gossip.csv", "w") do |csv|
-      gossips_update.each do |gossip|
+      all_gossips.each do |gossip|
         csv << [gossip.author, gossip.content]
       end
     end
-  end
+  end 
 
 end

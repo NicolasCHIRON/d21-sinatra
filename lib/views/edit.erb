@@ -3,7 +3,7 @@
     <title>L'éditeur de potin !</title>
   </head>
     <p>Modifie le potin n°<%= id %> via le formulaire ci-dessous</p>
-    <form action='/gossips/:id/edit/' method='POST'>
+    <form action='/gossips/<%= id %>/edit/' method='POST'>
       Change le nom de l'auteur : <input type='text' name='gossip_author'/><br/>
       Change le contenu du potin : <input type='text' name='gossip_content'/><br/>
       <input type='submit'/>
