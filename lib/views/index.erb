@@ -4,10 +4,10 @@
   </head>
   <body>
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
-  <p> Voici la liste de tous les potins </p>
+  <p> Voici la liste de tous les potins : </p>
   <% gossips.each_with_index do |gossip, index| %>
     <p>
-      <a href = "/gossips/<%= index + 1 %>">Potin n°<%= index + 1 %> : <%= gossip.author %></a></p>
+      <a href = "/gossips/<%= index + 1 %>/">Potin n°<%= index + 1 %> - Auteur : <%= gossip.author %></a></p>
     </p>
   <% end %>
 
